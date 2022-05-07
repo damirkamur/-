@@ -84,18 +84,19 @@ class SeaMap:
                     self.__field[r + 1][c - 1] = '*'
 
 
-sm = SeaMap()
-sm.shoot(0, 0, 'sink')
-sm.shoot(0, 9, 'sink')
-sm.shoot(9, 0, 'sink')
-sm.shoot(9, 9, 'sink')
+if __name__ == '__main__':
+    sm = SeaMap()
+    sm.shoot(0, 0, 'sink')
+    sm.shoot(0, 9, 'sink')
+    sm.shoot(9, 0, 'sink')
+    sm.shoot(9, 9, 'sink')
 
-sm.shoot(3, 3, 'hit')
-sm.shoot(3, 5, 'hit')
-sm.shoot(3, 2, 'hit')
-sm.shoot(3, 4, 'sink')
+    sm.shoot(3, 3, 'hit')
+    sm.shoot(3, 5, 'hit')
+    sm.shoot(3, 2, 'hit')
+    sm.shoot(3, 4, 'sink')
 
-for row in range(10):
-    for col in range(10):
-        print(sm.cell(row, col), end='')
-    print()
+    for row in range(10):
+        for col in range(10):
+            print(sm.cell(row, col), end='')
+        print()
